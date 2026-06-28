@@ -1,0 +1,255 @@
+.about-sec {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
+.about-2 {
+  display: grid;
+  gap: 24px;
+}
+
+/* INTRO */
+.about-intro {
+  padding: 48px 44px;
+}
+
+.about-intro .about-2 {
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.about-intro__img {
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.about-intro__img img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: grayscale(100%);
+}
+
+.about-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 700 12px/1 'Hanken Grotesk', sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+}
+
+.about-kicker__dash {
+  width: 16px;
+  height: 2px;
+  background: var(--green);
+}
+
+.about-intro__title {
+  font: 600 36px/1.12 'Schibsted Grotesk', sans-serif;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin: 16px 0 0;
+  text-wrap: balance;
+}
+
+.about-intro__p {
+  font: 400 17px/1.7 'Hanken Grotesk', sans-serif;
+  color: var(--body);
+  margin: 14px 0 0;
+}
+
+.about-intro__p:first-of-type {
+  margin-top: 20px;
+}
+
+/* VISION / MISSION */
+.about-vm-sec {
+  padding: 24px 44px 48px;
+}
+
+.about-vm {
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-vm__card {
+  border-radius: 20px;
+  padding: 34px;
+}
+
+.about-vm__card--vision {
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.about-vm__card--mission {
+  background: var(--mint);
+}
+
+.about-vm__star {
+  font-size: 26px;
+  color: var(--green);
+}
+
+.about-vm__card--mission .about-vm__star {
+  color: var(--ink);
+}
+
+.about-vm__card h3 {
+  font: 600 24px/1.2 'Schibsted Grotesk', sans-serif;
+  color: var(--ink);
+  margin: 16px 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.about-vm__card--vision p {
+  font: 400 16px/1.65 'Hanken Grotesk', sans-serif;
+  color: var(--body);
+  margin: 0;
+}
+
+.about-vm__card--mission p {
+  font: 400 16px/1.65 'Hanken Grotesk', sans-serif;
+  color: #2f4a22;
+  margin: 0;
+}
+
+/* TANGIBLE RESULTS */
+.about-results-sec {
+  padding: 24px 44px 56px;
+}
+
+.about-results {
+  background: var(--forest);
+  border-radius: 24px;
+  padding: 46px 44px;
+}
+
+.about-results__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.about-results__head h2 {
+  font: 700 34px/1.1 'Schibsted Grotesk', sans-serif;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.about-results__head span {
+  font: 400 15px/1.5 'Hanken Grotesk', sans-serif;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 300px;
+}
+
+.about-stats3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 34px;
+}
+
+.about-stat-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.about-stat-card__num {
+  font: 700 44px/1 'Schibsted Grotesk', sans-serif;
+  color: var(--forest-text);
+}
+
+.about-stat-card__label {
+  font: 500 14.5px/1.4 'Hanken Grotesk', sans-serif;
+  color: rgba(255, 255, 255, 0.78);
+  margin-top: 10px;
+}
+
+/* VALUES */
+.about-values-sec {
+  padding: 24px 44px 80px;
+}
+
+.about-values__intro {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 36px;
+}
+
+.about-values__intro h2 {
+  font: 700 38px/1.08 'Schibsted Grotesk', sans-serif;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.about-vals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.about-val-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 26px;
+}
+
+.about-val-card__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e2efd6;
+  color: var(--green-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.about-val-card h3 {
+  font: 600 18px/1.2 'Schibsted Grotesk', sans-serif;
+  color: var(--ink);
+  margin: 16px 0 6px;
+}
+
+.about-val-card p {
+  font: 400 14.5px/1.55 'Hanken Grotesk', sans-serif;
+  color: var(--body);
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 940px) {
+  .about-sec {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .about-intro .about-2,
+  .about-vm {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-vals {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-vals,
+  .about-stats3 {
+    grid-template-columns: 1fr;
+  }
+}

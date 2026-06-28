@@ -1,0 +1,23 @@
+.not-found {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 140px 44px;
+  text-align: center;
+}
+
+.not-found__star {
+  display: inline-block;
+  color: var(--green);
+  font-size: 28px;
+}
+
+.not-found h1 {
+  font: 700 36px/1.1 'Schibsted Grotesk', sans-serif;
+  margin: 16px 0 10px;
+}
+
+.not-found p {
+  font: 400 16px/1.6 'Hanken Grotesk', sans-serif;
+  color: var(--body);
+  margin-bottom: 28px;
+}

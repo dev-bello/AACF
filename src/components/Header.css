@@ -1,0 +1,145 @@
+.aacf-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(244, 240, 231, 0.82);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.aacf-header__bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.aacf-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+}
+
+.aacf-header__logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.aacf-header__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aacf-header__name {
+  font: 800 19px/1 'Schibsted Grotesk', sans-serif;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.aacf-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex: 1;
+  justify-content: center;
+}
+
+.aacf-header__link {
+  text-decoration: none;
+  color: var(--body);
+  font: 500 15px/1 'Hanken Grotesk', sans-serif;
+  transition: color 0.15s ease;
+}
+
+.aacf-header__link--active {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.aacf-header__cta {
+  text-decoration: none;
+  background: var(--ink);
+  color: #fff;
+  font: 700 14.5px/1 'Hanken Grotesk', sans-serif;
+  padding: 13px 24px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aacf-header__star {
+  color: var(--green);
+}
+
+.aacf-header__burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  cursor: pointer;
+  font-size: 19px;
+  color: var(--ink);
+}
+
+.aacf-header__mobile {
+  border-top: 1px solid var(--border);
+  background: var(--cream);
+  padding: 8px 20px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aacf-header__mobile-link {
+  text-decoration: none;
+  color: var(--ink-soft);
+  font: 600 16px/1 'Hanken Grotesk', sans-serif;
+  padding: 13px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.aacf-header__mobile-link--active {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.aacf-header__mobile-cta {
+  text-decoration: none;
+  text-align: center;
+  background: var(--ink);
+  color: #fff;
+  font: 700 16px/1 'Hanken Grotesk', sans-serif;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+@media (max-width: 960px) {
+  .aacf-header__desktop {
+    display: none !important;
+  }
+  .aacf-header__burger {
+    display: inline-flex !important;
+  }
+  .aacf-header__bar {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

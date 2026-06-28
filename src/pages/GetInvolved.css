@@ -1,0 +1,172 @@
+.involved-sec {
+  margin: 0 auto;
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
+/* WAYS TO HELP */
+.involved-ways-sec {
+  max-width: 1200px;
+  padding: 44px 44px 56px;
+}
+
+.involved-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.involved-way-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.involved-way-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: var(--mint);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.involved-way-card h3 {
+  font: 600 22px/1.2 'Schibsted Grotesk', sans-serif;
+  color: var(--ink);
+  margin: 18px 0 8px;
+}
+
+.involved-way-card p {
+  font: 400 15px/1.6 'Hanken Grotesk', sans-serif;
+  color: var(--body);
+  margin: 0;
+}
+
+/* FORM */
+.involved-form-sec {
+  max-width: 1100px;
+  padding: 0 44px 80px;
+}
+
+.involved-form-intro {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 36px;
+}
+
+.involved-form-intro h2 {
+  font: 700 44px/1.05 'Schibsted Grotesk', sans-serif;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.involved-form-intro p {
+  font: 400 16.5px/1.6 'Hanken Grotesk', sans-serif;
+  color: var(--body);
+  margin: 14px 0 0;
+}
+
+.involved-form-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 40px;
+}
+
+.involved-names {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.involved-names--spaced {
+  margin-top: 16px;
+}
+
+.involved-form-card input,
+.involved-select,
+.involved-form-card textarea {
+  padding: 15px 16px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 12px;
+  font-size: 15.5px;
+  color: var(--ink);
+  outline: none;
+  background: #fff;
+  font-family: 'Hanken Grotesk', sans-serif;
+  width: 100%;
+}
+
+.involved-select {
+  margin-top: 16px;
+  display: block;
+}
+
+.involved-form-card textarea {
+  margin-top: 16px;
+  resize: vertical;
+}
+
+.involved-submit {
+  margin-top: 18px;
+  width: 100%;
+  background: var(--ink);
+  color: #fff;
+  font: 700 16px/1 'Hanken Grotesk', sans-serif;
+  padding: 17px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* SENT STATE */
+.involved-form-sent {
+  text-align: center;
+  padding: 36px 8px;
+}
+
+.involved-form-sent__check {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.involved-form-sent h3 {
+  font: 600 28px/1.15 'Schibsted Grotesk', sans-serif;
+  color: var(--ink);
+  margin: 20px 0 8px;
+}
+
+.involved-form-sent p {
+  font: 400 16.5px/1.6 'Hanken Grotesk', sans-serif;
+  color: var(--body);
+  margin: 0 auto;
+  max-width: 380px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 940px) {
+  .involved-sec {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .involved-3 {
+    grid-template-columns: 1fr;
+  }
+  .involved-names {
+    grid-template-columns: 1fr;
+  }
+}

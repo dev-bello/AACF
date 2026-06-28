@@ -1,0 +1,119 @@
+.leadership-title {
+  font-size: 60px;
+  line-height: 1.04;
+}
+
+.leadership-sec {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
+.leadership-grid-sec {
+  padding: 44px 44px 56px;
+}
+
+.leadership-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.leader-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.leader-card__img {
+  height: 300px;
+  overflow: hidden;
+}
+
+.leader-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  filter: grayscale(100%);
+}
+
+.leader-card__body {
+  padding: 24px;
+}
+
+.leader-card__body h3 {
+  font: 600 21px/1.2 'Schibsted Grotesk', sans-serif;
+  color: var(--ink);
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.leader-card__body span {
+  font: 700 12px/1 'Hanken Grotesk', sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+}
+
+.leader-card__body p {
+  font: 400 14.5px/1.6 'Hanken Grotesk', sans-serif;
+  color: var(--body);
+  margin: 13px 0 0;
+}
+
+/* GOVERNANCE NOTE */
+.leadership-note-sec {
+  max-width: 1000px;
+  padding: 0 44px 80px;
+}
+
+.leadership-note {
+  background: var(--mint);
+  border-radius: 22px;
+  padding: 40px 44px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.leadership-note__star {
+  font-size: 34px;
+  color: var(--ink);
+}
+
+.leadership-note p {
+  flex: 1;
+  min-width: 280px;
+  font: 500 20px/1.5 'Schibsted Grotesk', sans-serif;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* RESPONSIVE */
+@media (max-width: 940px) {
+  .leadership-sec {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .leadership-3 {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .leadership-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 560px) {
+  .leadership-title {
+    font-size: 38px;
+  }
+}

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --cream: #f4f0e7;
+  --cream-deep: #efe7d8;
+  --card: #fbf9f4;
+  --ink: #16130e;
+  --ink-soft: #3f3b34;
+  --body: #56524b;
+  --muted: #8a857c;
+  --mint: #c7e7b3;
+  --green: #69be53;
+  --green-deep: #3f8159;
+  --green-dark: #3a6b2c;
+  --forest: #0f2d1c;
+  --forest-text: #9bd686;
+  --border: rgba(20, 17, 13, 0.08);
+  --border-strong: rgba(20, 17, 13, 0.14);
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--mint);
+  color: var(--ink);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+}
+
+.btn {
+  text-decoration: none;
+  font: 700 15.5px/1 'Hanken Grotesk', sans-serif;
+  padding: 16px 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.btn--dark {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--border-strong);
+}
+
+.btn--mint {
+  color: var(--forest);
+  background: var(--mint);
+  font: 700 14.5px/1 'Hanken Grotesk', sans-serif;
+  padding: 13px 24px;
+  border-radius: 999px;
+}

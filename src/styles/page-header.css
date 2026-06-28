@@ -1,0 +1,65 @@
+.page-title-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 66px 44px 8px;
+  text-align: center;
+}
+
+.page-title {
+  font: 700 64px/1.02 'Schibsted Grotesk', sans-serif;
+  color: var(--ink);
+  letter-spacing: -0.035em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.page-title__accent {
+  color: var(--green-deep);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  font: 500 13.5px/1 'Hanken Grotesk', sans-serif;
+  color: var(--muted);
+}
+
+.breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.breadcrumb__star {
+  color: var(--green);
+}
+
+.breadcrumb__current {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.page-subtitle {
+  font: 400 17.5px/1.6 'Hanken Grotesk', sans-serif;
+  color: var(--body);
+  max-width: 540px;
+  margin: 18px auto 0;
+}
+
+@media (max-width: 940px) {
+  .page-title-section {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .page-title {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-title {
+    font-size: 40px;
+  }
+}

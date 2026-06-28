@@ -1,0 +1,341 @@
+.donate-title {
+  font-size: 60px;
+  line-height: 1.03;
+}
+
+.donate-sec {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 44px 44px 80px;
+}
+
+.donate-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.donate-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 700 12px/1 'Hanken Grotesk', sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+}
+
+.donate-kicker__dash {
+  width: 16px;
+  height: 2px;
+  background: var(--green);
+}
+
+.donate-rationale__title {
+  font: 600 32px/1.18 'Schibsted Grotesk', sans-serif;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin: 16px 0 0;
+  text-wrap: balance;
+}
+
+.donate-rationale__p {
+  font: 400 16.5px/1.7 'Hanken Grotesk', sans-serif;
+  color: var(--body);
+  margin: 18px 0 0;
+}
+
+.donate-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.donate-tier {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+}
+
+.donate-tier span {
+  color: var(--green);
+  font-size: 17px;
+}
+
+.donate-tier p {
+  font: 400 15.5px/1.5 'Hanken Grotesk', sans-serif;
+  color: var(--body);
+  margin: 0;
+}
+
+.donate-tier strong {
+  color: var(--ink);
+}
+
+.donate-bank {
+  margin-top: 28px;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.donate-bank h4 {
+  font: 700 12px/1 'Hanken Grotesk', sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+  margin: 0 0 14px;
+}
+
+.donate-bank__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font: 500 15px/1.4 'Hanken Grotesk', sans-serif;
+  color: var(--ink);
+  margin-bottom: 9px;
+}
+
+.donate-bank__row span:first-child {
+  color: var(--muted);
+}
+
+.donate-bank__val {
+  font-weight: 700;
+  text-align: right;
+}
+
+/* WIDGET */
+.donate-widget {
+  background: var(--forest);
+  border-radius: 24px;
+  padding: 34px;
+  color: #fff;
+}
+
+.donate-widget__heading {
+  font: 600 24px/1.15 'Schibsted Grotesk', sans-serif;
+  color: #fff;
+  margin: 0 0 4px;
+}
+
+.donate-widget__sub {
+  font: 400 14.5px/1.5 'Hanken Grotesk', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 22px;
+}
+
+.donate-freq {
+  display: flex;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 5px;
+  border-radius: 13px;
+  margin-bottom: 22px;
+}
+
+.donate-freq__btn {
+  flex: 1;
+  padding: 11px;
+  border-radius: 9px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font: 700 14.5px/1 'Hanken Grotesk', sans-serif;
+  cursor: pointer;
+}
+
+.donate-freq__btn--active {
+  background: #fff;
+  color: var(--forest);
+}
+
+.donate-label {
+  font: 700 11.5px/1 'Hanken Grotesk', sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest-text);
+  display: block;
+}
+
+.donate-amts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  margin: 12px 0 16px;
+}
+
+.donate-chip {
+  padding: 14px 4px;
+  border-radius: 11px;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font: 700 14.5px/1 'Hanken Grotesk', sans-serif;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.donate-chip--active {
+  border: 1.5px solid var(--mint);
+  background: var(--mint);
+  color: var(--forest);
+}
+
+.donate-custom {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.donate-custom__symbol {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font: 600 16px/1 'Hanken Grotesk', sans-serif;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.donate-custom input {
+  width: 100%;
+  padding: 14px 16px 14px 34px;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  font-size: 15.5px;
+  color: #fff;
+  outline: none;
+  background: rgba(255, 255, 255, 0.06);
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.donate-select {
+  width: 100%;
+  margin: 12px 0 22px;
+  padding: 14px 16px;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  font-size: 15.5px;
+  color: #fff;
+  outline: none;
+  background: rgba(255, 255, 255, 0.06);
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.donate-select option {
+  color: var(--ink);
+}
+
+.donate-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  margin-bottom: 10px;
+}
+
+.donate-summary span:first-child {
+  font: 500 15px/1 'Hanken Grotesk', sans-serif;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.donate-summary__amt {
+  font: 700 26px/1 'Schibsted Grotesk', sans-serif;
+  color: #fff;
+}
+
+.donate-summary__amt span {
+  font: 500 13px/1 'Hanken Grotesk', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.donate-submit {
+  width: 100%;
+  background: var(--mint);
+  color: var(--forest);
+  font: 700 16.5px/1 'Hanken Grotesk', sans-serif;
+  padding: 17px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.donate-secure {
+  font: 400 12.5px/1.5 'Hanken Grotesk', sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 14px 0 0;
+  text-align: center;
+}
+
+/* DONE STATE */
+.donate-widget__done {
+  text-align: center;
+  padding: 40px 8px;
+}
+
+.donate-widget__check {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+}
+
+.donate-widget__done h3 {
+  font: 600 28px/1.15 'Schibsted Grotesk', sans-serif;
+  color: #fff;
+  margin: 22px 0 8px;
+}
+
+.donate-widget__done p {
+  font: 400 16px/1.6 'Hanken Grotesk', sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 auto;
+  max-width: 330px;
+}
+
+.donate-widget__done p strong {
+  color: var(--mint);
+}
+
+.donate-widget__reset {
+  margin-top: 26px;
+  background: transparent;
+  color: var(--mint);
+  font: 700 15px/1 'Hanken Grotesk', sans-serif;
+  padding: 13px 24px;
+  border: 1.5px solid rgba(199, 231, 179, 0.4);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 940px) {
+  .donate-sec {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .donate-2 {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .donate-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 560px) {
+  .donate-title {
+    font-size: 38px;
+  }
+  .donate-amts {
+    grid-template-columns: 1fr 1fr;
+  }
+}
