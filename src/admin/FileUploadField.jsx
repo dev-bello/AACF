@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { X, Upload, FileText } from 'lucide-react';
 import { supabase, isSupabaseConfigured } from '../lib/supabase';
 
 async function uploadFile(file, folder = 'images') {
@@ -45,7 +46,7 @@ export function ImageUploadField({ field, value, onChange }) {
         <div className="admin-upload-row">
           <button type="button" className="admin-btn admin-btn--ghost"
             onClick={() => ref.current?.click()} disabled={uploading}>
-            {uploading ? 'Uploading…' : '↑ Upload image'}
+            {uploading ? 'Uploading…' : <><Upload size={14} /> Upload image</>}
           </button>
           <input ref={ref} type="file" accept="image/*" style={{ display: 'none' }} onChange={handleFile} />
         </div>
@@ -92,7 +93,7 @@ export function ImagesUploadField({ field, value, onChange }) {
           {urls.map((url, i) => (
             <div key={i} className="admin-imglist__item">
               <img src={url} alt="" className="admin-imglist__thumb" />
-              <button type="button" className="admin-imglist__remove" onClick={() => remove(i)}>✕</button>
+              <button type="button" className="admin-imglist__remove" onClick={() => remove(i)}><X size={14} /></button>
             </div>
           ))}
         </div>
@@ -100,7 +101,7 @@ export function ImagesUploadField({ field, value, onChange }) {
       <div className="admin-upload-row">
         <button type="button" className="admin-btn admin-btn--ghost"
           onClick={() => ref.current?.click()} disabled={uploading}>
-          {uploading ? 'Uploading…' : '↑ Upload images'}
+          {uploading ? 'Uploading…' : <><Upload size={14} /> Upload images</>}
         </button>
         <input ref={ref} type="file" accept="image/*" multiple style={{ display: 'none' }} onChange={handleFiles} />
       </div>
@@ -143,7 +144,7 @@ export function ReportsField({ field, value, onChange }) {
         <ul className="admin-reports-list">
           {items.map((r, i) => (
             <li key={i} className="admin-reports-item">
-              <span className="admin-reports-icon">📄</span>
+              <span className="admin-reports-icon"><FileText size={15} /></span>
               <input className="admin-reports-name" value={r.name}
                 onChange={(e) => onChange(items.map((x, j) => j === i ? { ...x, name: e.target.value } : x))}
                 placeholder="Report name" />
@@ -151,7 +152,7 @@ export function ReportsField({ field, value, onChange }) {
                 className="admin-btn admin-btn--ghost" style={{ padding: '6px 10px', fontSize: 12 }}>View</a>
               <button type="button" className="admin-btn admin-btn--danger"
                 style={{ padding: '6px 10px', fontSize: 12 }}
-                onClick={() => onChange(items.filter((_, j) => j !== i))}>✕</button>
+                onClick={() => onChange(items.filter((_, j) => j !== i))}><X size={13} /></button>
             </li>
           ))}
         </ul>
@@ -159,7 +160,7 @@ export function ReportsField({ field, value, onChange }) {
       <div className="admin-upload-row">
         <button type="button" className="admin-btn admin-btn--ghost"
           onClick={() => ref.current?.click()} disabled={uploading}>
-          {uploading ? 'Uploading…' : '↑ Upload report / document'}
+          {uploading ? 'Uploading…' : <><Upload size={14} /> Upload report / document</>}
         </button>
         <input ref={ref} type="file" style={{ display: 'none' }} onChange={handleFile} />
       </div>

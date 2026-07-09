@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Check, Phone, Mail, MapPin } from 'lucide-react';
+import { ContentIcon } from '../lib/icons';
 import { useCollection, useSetting } from '../hooks/useContent';
 import '../styles/page-header.css';
 import './GetInvolved.css';
@@ -36,7 +38,7 @@ export default function GetInvolved() {
         <div className="involved-3">
           {ways.map((w) => (
             <div className="involved-way-card" key={w.id ?? w.title}>
-              <div className="involved-way-card__icon">{w.icon}</div>
+              <div className="involved-way-card__icon"><ContentIcon name={w.icon} size={22} /></div>
               <h3>{w.title}</h3>
               <p>{w.text}</p>
             </div>
@@ -54,7 +56,7 @@ export default function GetInvolved() {
         <div className="involved-form-card">
           {sent ? (
             <div className="involved-form-sent">
-              <div className="involved-form-sent__check">✓</div>
+              <div className="involved-form-sent__check"><Check size={34} strokeWidth={3} /></div>
               <h3>Thank you for stepping up!</h3>
               <p>We&rsquo;ve received your details and will reach out shortly about upcoming opportunities.</p>
             </div>
@@ -94,7 +96,7 @@ export default function GetInvolved() {
         </div>
         <div className="contact-3" style={{ marginTop: 32 }}>
           <div className="contact-card contact-card--mint">
-            <div className="contact-card__icon">✆</div>
+            <div className="contact-card__icon"><Phone size={22} /></div>
             <h3>Call Us</h3>
             <p>
               {info.phone}
@@ -103,7 +105,7 @@ export default function GetInvolved() {
             </p>
           </div>
           <div className="contact-card">
-            <div className="contact-card__icon">✉</div>
+            <div className="contact-card__icon"><Mail size={22} /></div>
             <h3>Email Us</h3>
             <p>
               {info.email1}
@@ -112,7 +114,7 @@ export default function GetInvolved() {
             </p>
           </div>
           <div className="contact-card">
-            <div className="contact-card__icon">📍</div>
+            <div className="contact-card__icon"><MapPin size={22} /></div>
             <h3>Visit Us</h3>
             <p>{info.address}</p>
           </div>

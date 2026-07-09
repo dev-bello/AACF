@@ -2,6 +2,28 @@ import { Link } from 'react-router-dom';
 import { useCollection, useSetting } from '../hooks/useContent';
 import './Home.css';
 
+// Parse money strings like "₦1.8M", "₦900K", "₦1,200,000" into a number.
+function parseAmount(str) {
+  if (str == null) return 0;
+  const s = String(str).trim().replace(/[₦,\s]/g, '');
+  const m = s.match(/^([0-9]*\.?[0-9]+)\s*([kKmMbB]?)/);
+  if (!m) return 0;
+  let n = parseFloat(m[1]);
+  const unit = m[2].toLowerCase();
+  if (unit === 'k') n *= 1e3;
+  else if (unit === 'm') n *= 1e6;
+  else if (unit === 'b') n *= 1e9;
+  return n;
+}
+
+// Progress percentage of raised toward goal, clamped to 0–100.
+function progressPct(raised, goal) {
+  const g = parseAmount(goal);
+  if (!g) return 0;
+  const pct = (parseAmount(raised) / g) * 100;
+  return Math.max(0, Math.min(100, Math.round(pct)));
+}
+
 export default function Home() {
   const { items: causes }   = useCollection('causes');
   const { items: partners } = useCollection('home_trust');
@@ -89,25 +111,28 @@ export default function Home() {
           </p>
         </div>
         <div className="home-causes">
-          {causes.map((c) => (
-            <div className="cause-card" key={c.id ?? c.title}>
-              <div className="cause-card__img">
-                <img src={c.image_url} alt={c.title} />
-              </div>
-              <div className="cause-card__body">
-                <span className="cause-card__tag">{c.tag}</span>
-                <h3 className="cause-card__title">{c.title}</h3>
-                <div className="cause-card__progress-meta">
-                  <span>Raised {c.raised}</span>
-                  <span>{c.goal}</span>
+          {causes.map((c) => {
+            const pct = progressPct(c.raised, c.goal);
+            return (
+              <div className="cause-card" key={c.id ?? c.title}>
+                <div className="cause-card__img">
+                  <img src={c.image_url} alt={c.title} />
                 </div>
-                <div className="cause-card__progress-track">
-                  <div className="cause-card__progress-fill" style={{ width: c.pct }} />
+                <div className="cause-card__body">
+                  <span className="cause-card__tag">{c.tag}</span>
+                  <h3 className="cause-card__title">{c.title}</h3>
+                  <div className="cause-card__progress-meta">
+                    <span>Raised {c.raised}</span>
+                    <span>{pct}% of {c.goal}</span>
+                  </div>
+                  <div className="cause-card__progress-track">
+                    <div className="cause-card__progress-fill" style={{ width: `${pct}%` }} />
+                  </div>
+                  <Link to="/donate" className="cause-card__cta">Donate Now</Link>
                 </div>
-                <Link to="/donate" className="cause-card__cta">Donate Now</Link>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 

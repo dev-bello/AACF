@@ -29,7 +29,19 @@
 }
 
 .contact-card__icon {
-  font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: var(--mint);
+  color: var(--ink);
+}
+
+.contact-card--mint .contact-card__icon {
+  background: #fff;
+  color: var(--green-dark);
 }
 
 .contact-card h3 {

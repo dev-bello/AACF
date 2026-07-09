@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Lock, Check } from 'lucide-react';
 import { useCollection, useSetting } from '../hooks/useContent';
 import '../styles/page-header.css';
 import './Donate.css';
@@ -105,7 +106,7 @@ export default function Donate() {
           <div className="donate-widget">
             {donated ? (
               <div className="donate-widget__done">
-                <div className="donate-widget__check">✓</div>
+                <div className="donate-widget__check"><Check size={30} strokeWidth={3} /></div>
                 <h3>Jazākallāhu Khayran!</h3>
                 <p>
                   Thank you for your generous <strong>{summaryText}</strong>. Your kindness will
@@ -188,7 +189,7 @@ export default function Donate() {
                 <button type="submit" className="donate-submit">
                   Proceed to Give →
                 </button>
-                <p className="donate-secure">🔒 Secure giving · A confirmation will be sent by email.</p>
+                <p className="donate-secure"><Lock size={13} /> Secure giving · A confirmation will be sent by email.</p>
               </form>
             )}
           </div>

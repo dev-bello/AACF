@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ContentIcon } from '../lib/icons';
 import { useCollection, useSetting } from '../hooks/useContent';
 import '../styles/page-header.css';
 import './About.css';
@@ -82,7 +83,7 @@ export default function About() {
         <div className="about-vals">
           {values.map((v) => (
             <div className="about-val-card" key={v.id ?? v.title}>
-              <div className="about-val-card__icon">{v.icon}</div>
+              <div className="about-val-card__icon"><ContentIcon name={v.icon} size={20} /></div>
               <h3>{v.title}</h3>
               <p>{v.text}</p>
             </div>

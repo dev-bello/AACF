@@ -23,12 +23,11 @@ export const COLLECTIONS = {
       { name: 'image_url', label: 'Image',      type: 'image' },
       { name: 'raised',    label: 'Raised',     type: 'text' },
       { name: 'goal',      label: 'Goal',       type: 'text' },
-      { name: 'pct',       label: 'Progress %', type: 'text' },
     ],
     defaults: [
-      { tag: 'Food Security', title: 'Ramadan Food Relief',    image_url: ramadanPackage, raised: '₦1.8M', goal: '₦3M', pct: '60%' },
-      { tag: 'Empowerment',   title: "Women's Skills Training", image_url: skillsTraining, raised: '₦1.2M', goal: '₦2M', pct: '60%' },
-      { tag: 'Education',     title: 'Orphan Education Fund',  image_url: communitySchool, raised: '₦900K', goal: '₦2M', pct: '45%' },
+      { tag: 'Food Security', title: 'Ramadan Food Relief',    image_url: ramadanPackage, raised: '₦1.8M', goal: '₦3M' },
+      { tag: 'Empowerment',   title: "Women's Skills Training", image_url: skillsTraining, raised: '₦1.2M', goal: '₦2M' },
+      { tag: 'Education',     title: 'Orphan Education Fund',  image_url: communitySchool, raised: '₦900K', goal: '₦2M' },
     ],
   },
 
@@ -150,15 +149,15 @@ export const COLLECTIONS = {
     label: 'About — Values',
     description: 'The values cards on the About page.',
     fields: [
-      { name: 'icon',  label: 'Icon',  type: 'text' },
+      { name: 'icon',  label: 'Icon',  type: 'icon' },
       { name: 'title', label: 'Title', type: 'text' },
       { name: 'text',  label: 'Text',  type: 'textarea' },
     ],
     defaults: [
-      { icon: '✻', title: 'Compassion',    text: 'We lead every outreach with empathy and genuine care.' },
-      { icon: '◆', title: 'Dignity',       text: 'We protect the worth of every person we serve.' },
-      { icon: '●', title: 'Transparency',  text: 'Faithful, accountable stewardship of every gift.' },
-      { icon: '▲', title: 'Self-Reliance', text: 'We build lasting capacity, not just relief.' },
+      { icon: 'heart',     title: 'Compassion',    text: 'We lead every outreach with empathy and genuine care.' },
+      { icon: 'shield',    title: 'Dignity',       text: 'We protect the worth of every person we serve.' },
+      { icon: 'handshake', title: 'Transparency',  text: 'Faithful, accountable stewardship of every gift.' },
+      { icon: 'sprout',    title: 'Self-Reliance', text: 'We build lasting capacity, not just relief.' },
     ],
   },
 
@@ -180,14 +179,14 @@ export const COLLECTIONS = {
     label: 'Get Involved — Ways to Help',
     description: 'The ways-to-help cards on the Get Involved page.',
     fields: [
-      { name: 'icon',  label: 'Icon',  type: 'text' },
+      { name: 'icon',  label: 'Icon',  type: 'icon' },
       { name: 'title', label: 'Title', type: 'text' },
       { name: 'text',  label: 'Text',  type: 'textarea' },
     ],
     defaults: [
-      { icon: '✻', title: 'Volunteer',     text: 'Join distributions, mentoring and outreach. Hands on the ground change everything.' },
-      { icon: '◆', title: 'Partner With Us', text: "Corporate CSR, NGOs and institutions — let's scale impact together through partnership." },
-      { icon: '●', title: 'Donate Goods',  text: 'Food, clothing, books and materials. In-kind giving reaches families directly.' },
+      { icon: 'hand-heart', title: 'Volunteer',      text: 'Join distributions, mentoring and outreach. Hands on the ground change everything.' },
+      { icon: 'handshake',  title: 'Partner With Us', text: "Corporate CSR, NGOs and institutions — let's scale impact together through partnership." },
+      { icon: 'gift',       title: 'Donate Goods',   text: 'Food, clothing, books and materials. In-kind giving reaches families directly.' },
     ],
   },
 
@@ -321,7 +320,7 @@ export const SETTINGS = {
       image_url: '/images/women-group.jpeg',
       heading:   'Real change, measured in lives.',
       text:      "Every donation becomes food on a table, a child in school, or a woman with a trade. Since our launch, the foundation's reach has grown steadily — community by community.",
-      cta:       'Support This Work →',
+      cta:       'Support This Work',
     },
   },
 

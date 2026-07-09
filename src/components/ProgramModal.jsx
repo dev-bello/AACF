@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { X, Calendar, MapPin, Users, FileText, Download } from 'lucide-react';
 import './ProgramModal.css';
 
 function fmt(dateStr) {
@@ -38,7 +39,7 @@ export default function ProgramModal({ program, onClose }) {
   return (
     <div className="pmodal-backdrop" onClick={onClose}>
       <div className="pmodal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
-        <button className="pmodal__close" onClick={onClose} aria-label="Close">✕</button>
+        <button className="pmodal__close" onClick={onClose} aria-label="Close"><X size={20} /></button>
 
         <div className="pmodal__body">
           {/* IMAGE PANEL */}
@@ -73,19 +74,19 @@ export default function ProgramModal({ program, onClose }) {
             <div className="pmodal__meta">
               {(program.start_date || program.end_date) && (
                 <div className="pmodal__meta-row">
-                  <span className="pmodal__meta-icon">📅</span>
+                  <span className="pmodal__meta-icon"><Calendar size={16} /></span>
                   <span>{fmt(program.start_date)}{program.end_date ? ` – ${program.end_date}` : ''}</span>
                 </div>
               )}
               {program.location && (
                 <div className="pmodal__meta-row">
-                  <span className="pmodal__meta-icon">📍</span>
+                  <span className="pmodal__meta-icon"><MapPin size={16} /></span>
                   <span>{program.location}</span>
                 </div>
               )}
               {program.beneficiaries && (
                 <div className="pmodal__meta-row">
-                  <span className="pmodal__meta-icon">👥</span>
+                  <span className="pmodal__meta-icon"><Users size={16} /></span>
                   <span>{program.beneficiaries}</span>
                 </div>
               )}
@@ -104,11 +105,11 @@ export default function ProgramModal({ program, onClose }) {
                 <ul className="pmodal__reports">
                   {reports.map((r, i) => (
                     <li key={i} className="pmodal__report">
-                      <span className="pmodal__report-icon">📄</span>
+                      <span className="pmodal__report-icon"><FileText size={16} /></span>
                       <a href={r.url} target="_blank" rel="noreferrer" className="pmodal__report-link">
                         {r.name}
                       </a>
-                      <span className="pmodal__report-dl">↓ Download</span>
+                      <span className="pmodal__report-dl"><Download size={13} /> Download</span>
                     </li>
                   ))}
                 </ul>

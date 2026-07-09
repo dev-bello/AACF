@@ -11,9 +11,9 @@ delete from public.site_settings;
 insert into public.content_items (collection, sort_order, data) values
 
 -- Home — cause cards
-('causes', 0, '{"tag":"Food Security","title":"Ramadan Food Relief","image_url":"/images/ramadan-package.jpeg","raised":"₦1.8M","goal":"₦3M","pct":"60%"}'),
-('causes', 1, '{"tag":"Empowerment","title":"Women''s Skills Training","image_url":"/images/skills-training.jpeg","raised":"₦1.2M","goal":"₦2M","pct":"60%"}'),
-('causes', 2, '{"tag":"Education","title":"Orphan Education Fund","image_url":"/images/community-school.jpeg","raised":"₦900K","goal":"₦2M","pct":"45%"}'),
+('causes', 0, '{"tag":"Food Security","title":"Ramadan Food Relief","image_url":"/images/ramadan-package.jpeg","raised":"₦1.8M","goal":"₦3M"}'),
+('causes', 1, '{"tag":"Empowerment","title":"Women''s Skills Training","image_url":"/images/skills-training.jpeg","raised":"₦1.2M","goal":"₦2M"}'),
+('causes', 2, '{"tag":"Education","title":"Orphan Education Fund","image_url":"/images/community-school.jpeg","raised":"₦900K","goal":"₦2M"}'),
 
 -- Programs
 ('programs', 0, '{
@@ -89,10 +89,10 @@ insert into public.content_items (collection, sort_order, data) values
 ('leaders', 2, '{"name":"Administrative Secretary","role":"Operations & Coordination","image_url":"/images/admin-secretary.jpeg","bio":"Coordinating programs, volunteers and day-to-day delivery across the communities we serve."}'),
 
 -- About values
-('about_values', 0, '{"icon":"✻","title":"Compassion","text":"We lead every outreach with empathy and genuine care."}'),
-('about_values', 1, '{"icon":"◆","title":"Dignity","text":"We protect the worth of every person we serve."}'),
-('about_values', 2, '{"icon":"●","title":"Transparency","text":"Faithful, accountable stewardship of every gift."}'),
-('about_values', 3, '{"icon":"▲","title":"Self-Reliance","text":"We build lasting capacity, not just relief."}'),
+('about_values', 0, '{"icon":"heart","title":"Compassion","text":"We lead every outreach with empathy and genuine care."}'),
+('about_values', 1, '{"icon":"shield","title":"Dignity","text":"We protect the worth of every person we serve."}'),
+('about_values', 2, '{"icon":"handshake","title":"Transparency","text":"Faithful, accountable stewardship of every gift."}'),
+('about_values', 3, '{"icon":"sprout","title":"Self-Reliance","text":"We build lasting capacity, not just relief."}'),
 
 -- About stats
 ('about_stats', 0, '{"num":"2,000+","label":"Individuals reached with relief"}'),
@@ -100,9 +100,9 @@ insert into public.content_items (collection, sort_order, data) values
 ('about_stats', 2, '{"num":"120+","label":"Women trained & equipped"}'),
 
 -- Get Involved ways
-('involvement_ways', 0, '{"icon":"✻","title":"Volunteer","text":"Join distributions, mentoring and outreach. Hands on the ground change everything."}'),
-('involvement_ways', 1, '{"icon":"◆","title":"Partner With Us","text":"Corporate CSR, NGOs and institutions — let''s scale impact together through partnership."}'),
-('involvement_ways', 2, '{"icon":"●","title":"Donate Goods","text":"Food, clothing, books and materials. In-kind giving reaches families directly."}'),
+('involvement_ways', 0, '{"icon":"hand-heart","title":"Volunteer","text":"Join distributions, mentoring and outreach. Hands on the ground change everything."}'),
+('involvement_ways', 1, '{"icon":"handshake","title":"Partner With Us","text":"Corporate CSR, NGOs and institutions — let''s scale impact together through partnership."}'),
+('involvement_ways', 2, '{"icon":"gift","title":"Donate Goods","text":"Food, clothing, books and materials. In-kind giving reaches families directly."}'),
 
 -- Donate tiers
 ('donate_tiers', 0, '{"amount":"₦5,000","text":"provides a family''s food pack for Ramadan."}'),
@@ -162,7 +162,7 @@ insert into public.site_settings (key, value) values
   "image_url":"/images/women-group.jpeg",
   "heading":"Real change, measured in lives.",
   "text":"Every donation becomes food on a table, a child in school, or a woman with a trade. Since our launch, the foundation''s reach has grown steadily — community by community.",
-  "cta":"Support This Work →"
+  "cta":"Support This Work"
 }'),
 ('home_impact_band', '{
   "image_url":"/images/ramadan-handover.jpeg",

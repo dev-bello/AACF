@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, Check } from 'lucide-react';
 import { useSetting } from '../hooks/useContent';
 import '../styles/page-header.css';
 import './Contact.css';
@@ -31,7 +32,7 @@ export default function Contact() {
       <section className="contact-sec contact-cards-sec">
         <div className="contact-3">
           <div className="contact-card contact-card--mint">
-            <div className="contact-card__icon">✆</div>
+            <div className="contact-card__icon"><Phone size={22} /></div>
             <h3>Call Us</h3>
             <p>
               {info.phone}
@@ -40,7 +41,7 @@ export default function Contact() {
             </p>
           </div>
           <div className="contact-card">
-            <div className="contact-card__icon">✉</div>
+            <div className="contact-card__icon"><Mail size={22} /></div>
             <h3>Email Us</h3>
             <p>
               {info.email1}
@@ -49,7 +50,7 @@ export default function Contact() {
             </p>
           </div>
           <div className="contact-card">
-            <div className="contact-card__icon">📍</div>
+            <div className="contact-card__icon"><MapPin size={22} /></div>
             <h3>Visit Us</h3>
             <p>{info.address}</p>
           </div>
@@ -61,7 +62,7 @@ export default function Contact() {
         <div className="contact-form-card">
           {sent ? (
             <div className="contact-form-sent">
-              <div className="contact-form-sent__check">✓</div>
+              <div className="contact-form-sent__check"><Check size={30} strokeWidth={3} /></div>
               <h3>Message received</h3>
               <p>Thank you for reaching out. A member of our team will respond as soon as possible.</p>
             </div>

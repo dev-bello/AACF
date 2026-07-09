@@ -147,7 +147,7 @@
   font: 500 14px/1.5 'Hanken Grotesk', sans-serif;
   color: #3a4654;
 }
-.pmodal__meta-icon { flex-shrink: 0; font-size: 15px; }
+.pmodal__meta-icon { display: inline-flex; align-items: center; flex-shrink: 0; color: #2a7d6f; margin-top: 1px; }
 
 /* SECTIONS */
 .pmodal__section {
@@ -185,7 +185,7 @@
   border-radius: 10px;
   padding: 10px 14px;
 }
-.pmodal__report-icon { font-size: 16px; }
+.pmodal__report-icon { display: inline-flex; align-items: center; color: #2a7d6f; }
 .pmodal__report-link {
   flex: 1;
   font: 600 14px/1 'Hanken Grotesk', sans-serif;
@@ -194,6 +194,9 @@
 }
 .pmodal__report-link:hover { text-decoration: underline; }
 .pmodal__report-dl {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font: 500 12px/1 'Hanken Grotesk', sans-serif;
   color: #2a7d6f;
   white-space: nowrap;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { ChevronUp, ChevronDown } from 'lucide-react';
 import { supabase, isSupabaseConfigured } from '../lib/supabase';
 import { COLLECTIONS } from '../content/schema';
 import FormField from './FormField';
@@ -163,15 +164,17 @@ function Editor({ collectionKey, config }) {
                     className="admin-btn admin-btn--icon"
                     disabled={idx === 0}
                     onClick={() => move(item, -1)}
+                    aria-label="Move up"
                   >
-                    ↑
+                    <ChevronUp size={16} />
                   </button>
                   <button
                     className="admin-btn admin-btn--icon"
                     disabled={idx === items.length - 1}
                     onClick={() => move(item, 1)}
+                    aria-label="Move down"
                   >
-                    ↓
+                    <ChevronDown size={16} />
                   </button>
                   <button className="admin-btn admin-btn--ghost" onClick={() => setEditing({ ...item })}>
                     Edit

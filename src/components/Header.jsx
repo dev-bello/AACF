@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import logo from '../assets/images/logo.jpeg';
 import './Header.css';
 
@@ -47,7 +48,7 @@ export default function Header() {
           aria-label="Menu"
           onClick={() => setOpen((v) => !v)}
         >
-          ☰
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 

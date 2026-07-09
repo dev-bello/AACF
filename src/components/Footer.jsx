@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { FaFacebookF, FaInstagram, FaCcPaypal, FaCcVisa, FaCcMastercard, FaBuildingColumns } from 'react-icons/fa6';
 import './Footer.css';
 
 export default function Footer() {
@@ -43,14 +44,14 @@ export default function Footer() {
         <div className="aacf-footer__mid">
           <div className="aacf-footer__accept">
             <span className="aacf-footer__accept-label">We Accept</span>
-            <span className="aacf-footer__pill">PayPal</span>
-            <span className="aacf-footer__pill">VISA</span>
-            <span className="aacf-footer__pill">Mastercard</span>
-            <span className="aacf-footer__pill">Transfer</span>
+            <span className="aacf-footer__pill" title="PayPal"><FaCcPaypal /></span>
+            <span className="aacf-footer__pill" title="Visa"><FaCcVisa /></span>
+            <span className="aacf-footer__pill" title="Mastercard"><FaCcMastercard /></span>
+            <span className="aacf-footer__pill" title="Bank Transfer"><FaBuildingColumns /></span>
           </div>
           <div className="aacf-footer__social">
-            <a href="#" className="aacf-footer__social-link">Facebook</a>
-            <a href="#" className="aacf-footer__social-link">Instagram</a>
+            <a href="#" className="aacf-footer__social-link" aria-label="Facebook"><FaFacebookF /></a>
+            <a href="#" className="aacf-footer__social-link" aria-label="Instagram"><FaInstagram /></a>
             <Link to="/get-involved" className="aacf-footer__subscribe">Subscribe Newsletter</Link>
           </div>
         </div>

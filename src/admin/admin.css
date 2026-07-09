@@ -240,7 +240,7 @@
   border-radius: 8px;
   padding: 8px 10px;
 }
-.admin-reports-icon { font-size: 15px; flex-shrink: 0; }
+.admin-reports-icon { display: inline-flex; align-items: center; flex-shrink: 0; color: #5c6b7a; }
 .admin-reports-name {
   flex: 1;
   border: none;
@@ -308,6 +308,10 @@
 
 /* Buttons */
 .admin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   border: 1px solid transparent;
   border-radius: 8px;
   padding: 8px 14px;
@@ -339,6 +343,33 @@
 }
 .admin-btn--icon {
   padding: 6px 10px;
+}
+
+/* Icon picker */
+.admin-iconpicker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.admin-iconpicker__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid #cfd6dd;
+  background: #fff;
+  color: #1c2430;
+  cursor: pointer;
+}
+.admin-iconpicker__btn:hover {
+  border-color: #2a7d6f;
+}
+.admin-iconpicker__btn--active {
+  border-color: #2a7d6f;
+  background: #e8f3f0;
+  color: #2a7d6f;
 }
 
 /* Status / banners */
