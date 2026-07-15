@@ -11,3 +11,9 @@ port = 54331
 
 [inbucket]
 port = 54332
+
+# Paystack calls this webhook server-to-server, so it can't present a Supabase
+# JWT. Disable the gateway's JWT check and verify the Paystack signature inside
+# the function instead.
+[functions.paystack-webhook]
+verify_jwt = false
