@@ -19,6 +19,7 @@ insert into public.content_items (collection, sort_order, data) values
 ('programs', 0, '{
   "tag":"Food Security","title":"Ramadan Food Relief",
   "image_url":"/images/ramadan-package.jpeg",
+  "images":["/images/ramadan-package.jpeg","/images/ramadan-handover.jpeg","/images/ramadan-family.jpeg"],
   "text":"Seasonal food packages — rice, grains, oil and essentials — delivered to hundreds of fasting families each Ramadan.",
   "details":"Each Ramadan, our team prepares and distributes food packages containing rice, maize, soya beans, vegetable oil, salt and seasoning to families identified by local community leaders. Distribution points are set up across multiple wards in Birnin-Kebbi to ensure accessibility. Recipients include widows, orphan-headed households and families living below the poverty line.",
   "start_date":"2022-03-01","end_date":"Ongoing (annually)",
@@ -28,6 +29,7 @@ insert into public.content_items (collection, sort_order, data) values
 ('programs', 1, '{
   "tag":"Empowerment","title":"Women''s Skills Training",
   "image_url":"/images/skills-training.jpeg",
+  "images":["/images/skills-training.jpeg","/images/women-group.jpeg","/images/widows-kits.jpeg"],
   "text":"Vocational training and starter kits in tailoring, knitting and small enterprise — helping women earn and stand on their own.",
   "details":"The Women''s Skills Training Programme equips widows, single mothers and young women with marketable vocational skills. Each cohort receives 3 months of hands-on training in tailoring, knitting or small-scale food processing, followed by a fully equipped starter kit to launch their own micro-enterprise. A savings and peer-support group is established for each graduating cohort.",
   "start_date":"2022-06-01","end_date":"Ongoing",
@@ -37,6 +39,7 @@ insert into public.content_items (collection, sort_order, data) values
 ('programs', 2, '{
   "tag":"Education","title":"Orphan & Child Education",
   "image_url":"/images/community-school.jpeg",
+  "images":["/images/community-school.jpeg","/images/founder-speaking.jpeg","/images/women-group.jpeg"],
   "text":"School fees, uniforms and learning materials that keep orphans and out-of-school children in the classroom.",
   "details":"The Orphan Education Fund covers school registration fees, uniforms, textbooks and stationery for orphaned and out-of-school children identified in partnership with local government education authorities. Children are monitored each term; caregivers receive a small stipend to offset indirect costs such as transport and lunch.",
   "start_date":"2023-01-01","end_date":"Ongoing",
@@ -46,6 +49,7 @@ insert into public.content_items (collection, sort_order, data) values
 ('programs', 3, '{
   "tag":"Care","title":"Widows & Vulnerable Support",
   "image_url":"/images/widows-kits.jpeg",
+  "images":["/images/widows-kits.jpeg","/images/ramadan-package.jpeg","/images/ramadan-handover.jpeg"],
   "text":"Direct support and care packages for widows, the elderly and persons living with disabilities.",
   "details":"Our Widows & Vulnerable Support programme delivers quarterly care packages containing food staples, toiletries and household essentials to registered beneficiaries. Persons with disabilities also receive assistive items and referrals to relevant government programmes. Home visits are conducted by our volunteers to ensure dignity and follow up on welfare.",
   "start_date":"2022-01-01","end_date":"Ongoing",
@@ -55,6 +59,7 @@ insert into public.content_items (collection, sort_order, data) values
 ('programs', 4, '{
   "tag":"Livelihoods","title":"Agriculture & Self-Reliance",
   "image_url":"/images/agriculture.jpeg",
+  "images":["/images/agriculture.jpeg","/images/ramadan-family.jpeg","/images/women-group.jpeg"],
   "text":"Seeds, tools and farming support that help families grow their own food and build sustainable income.",
   "details":"The Agriculture & Self-Reliance programme distributes improved seeds (maize, sorghum, cowpea), basic hand tools and fertiliser to smallholder farming families at the start of each planting season. Extension workers from the Kebbi State Agricultural Development Programme co-facilitate training in good agronomic practices. Participants are encouraged to save a portion of their harvest for the following season.",
   "start_date":"2023-04-01","end_date":"Ongoing (seasonal)",
@@ -64,6 +69,7 @@ insert into public.content_items (collection, sort_order, data) values
 ('programs', 5, '{
   "tag":"Wellbeing","title":"Health & Emergency Relief",
   "image_url":"/images/ramadan-family.jpeg",
+  "images":["/images/ramadan-family.jpeg","/images/ramadan-handover.jpeg","/images/ramadan-package.jpeg"],
   "text":"Medical outreach, clean water and rapid help for families facing illness, displacement or sudden crisis.",
   "details":"Our Health & Emergency Relief team responds to crises within 48 hours — providing food parcels, safe water, basic medicines and hygiene kits. We partner with local hospitals and the State Emergency Management Agency (SEMA) for referrals and logistics. During medical outreach days, free consultations, medications and health education are provided to underserved communities.",
   "start_date":"2022-08-01","end_date":"Ongoing (as needed)",
@@ -185,10 +191,5 @@ insert into public.site_settings (key, value) values
   "email1":"info@aacfoundation.org",
   "email2":"support@aacfoundation.org",
   "address":"Yari House, Near Gesse Roundabout, Birnin-Kebbi, Kebbi State"
-}'),
-('donate_bank', '{
-  "account_name":"AACF Foundation",
-  "account_no":"0000000000",
-  "bank_name":"[Bank Name]"
 }')
 on conflict (key) do update set value = excluded.value;

@@ -75,10 +75,12 @@
   color: #fff;
   font: 700 14.5px/1 'Hanken Grotesk', sans-serif;
   padding: 13px 24px;
+  border: none;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 }
 
 .aacf-header__star {
@@ -127,8 +129,11 @@
   color: #fff;
   font: 700 16px/1 'Hanken Grotesk', sans-serif;
   padding: 15px;
+  border: none;
   border-radius: 12px;
   margin-top: 10px;
+  width: 100%;
+  cursor: pointer;
 }
 
 @media (max-width: 960px) {

@@ -4,6 +4,8 @@ import communitySchool from '../assets/images/community-school.jpeg';
 import widowsKits from '../assets/images/widows-kits.jpeg';
 import agriculture from '../assets/images/agriculture.jpeg';
 import ramadanFamily from '../assets/images/ramadan-family.jpeg';
+import ramadanHandover from '../assets/images/ramadan-handover.jpeg';
+import womenGroup from '../assets/images/women-group.jpeg';
 import founderSpeaking from '../assets/images/founder-speaking.jpeg';
 import patronEmir from '../assets/images/patron-emir.jpeg';
 import adminSecretary from '../assets/images/admin-secretary.jpeg';
@@ -50,6 +52,7 @@ export const COLLECTIONS = {
     defaults: [
       {
         tag: 'Food Security', title: 'Ramadan Food Relief', image_url: ramadanPackage,
+        images: [ramadanPackage, ramadanHandover, ramadanFamily],
         text: 'Seasonal food packages — rice, grains, oil and essentials — delivered to hundreds of fasting families each Ramadan.',
         details: 'Each Ramadan, our team prepares and distributes food packages containing rice, maize, soya beans, vegetable oil, salt and seasoning to families identified by local community leaders. Distribution points are set up across multiple wards in Birnin-Kebbi to ensure accessibility. Recipients include widows, orphan-headed households and families living below the poverty line.',
         start_date: '2022-03-01', end_date: 'Ongoing (annually)',
@@ -58,6 +61,7 @@ export const COLLECTIONS = {
       },
       {
         tag: 'Empowerment', title: "Women's Skills Training", image_url: skillsTraining,
+        images: [skillsTraining, womenGroup, widowsKits],
         text: 'Vocational training and starter kits in tailoring, knitting and small enterprise — helping women earn and stand on their own.',
         details: "The Women's Skills Training Programme equips widows, single mothers and young women with marketable vocational skills. Each cohort receives 3 months of hands-on training in tailoring, knitting or small-scale food processing, followed by a fully equipped starter kit to launch their own micro-enterprise. A savings and peer-support group is established for each graduating cohort.",
         start_date: '2022-06-01', end_date: 'Ongoing',
@@ -66,6 +70,7 @@ export const COLLECTIONS = {
       },
       {
         tag: 'Education', title: 'Orphan & Child Education', image_url: communitySchool,
+        images: [communitySchool, founderSpeaking, womenGroup],
         text: 'School fees, uniforms and learning materials that keep orphans and out-of-school children in the classroom.',
         details: 'The Orphan Education Fund covers school registration fees, uniforms, textbooks and stationery for orphaned and out-of-school children identified in partnership with local government education authorities. Children are monitored each term; caregivers receive a small stipend to offset indirect costs such as transport and lunch.',
         start_date: '2023-01-01', end_date: 'Ongoing',
@@ -74,6 +79,7 @@ export const COLLECTIONS = {
       },
       {
         tag: 'Care', title: 'Widows & Vulnerable Support', image_url: widowsKits,
+        images: [widowsKits, ramadanPackage, ramadanHandover],
         text: 'Direct support and care packages for widows, the elderly and persons living with disabilities.',
         details: 'Our Widows & Vulnerable Support programme delivers quarterly care packages containing food staples, toiletries and household essentials to registered beneficiaries. Persons with disabilities also receive assistive items and referrals to relevant government programmes. Home visits are conducted by our volunteers to ensure dignity and follow up on welfare.',
         start_date: '2022-01-01', end_date: 'Ongoing',
@@ -82,6 +88,7 @@ export const COLLECTIONS = {
       },
       {
         tag: 'Livelihoods', title: 'Agriculture & Self-Reliance', image_url: agriculture,
+        images: [agriculture, ramadanFamily, womenGroup],
         text: 'Seeds, tools and farming support that help families grow their own food and build sustainable income.',
         details: 'The Agriculture & Self-Reliance programme distributes improved seeds (maize, sorghum, cowpea), basic hand tools and fertiliser to smallholder farming families at the start of each planting season. Extension workers from the Kebbi State Agricultural Development Programme co-facilitate training in good agronomic practices. Participants are encouraged to save a portion of their harvest for the following season.',
         start_date: '2023-04-01', end_date: 'Ongoing (seasonal)',
@@ -90,6 +97,7 @@ export const COLLECTIONS = {
       },
       {
         tag: 'Wellbeing', title: 'Health & Emergency Relief', image_url: ramadanFamily,
+        images: [ramadanFamily, ramadanHandover, ramadanPackage],
         text: 'Medical outreach, clean water and rapid help for families facing illness, displacement or sudden crisis.',
         details: 'Our Health & Emergency Relief team responds to crises within 48 hours — providing food parcels, safe water, basic medicines and hygiene kits. We partner with local hospitals and the State Emergency Management Agency (SEMA) for referrals and logistics. During medical outreach days, free consultations, medications and health education are provided to underserved communities.',
         start_date: '2022-08-01', end_date: 'Ongoing (as needed)',
@@ -396,19 +404,6 @@ export const SETTINGS = {
     },
   },
 
-  donate_bank: {
-    label: 'Donate — Bank Details',
-    fields: [
-      { name: 'account_name', label: 'Account Name', type: 'text' },
-      { name: 'account_no',   label: 'Account No.',  type: 'text' },
-      { name: 'bank_name',    label: 'Bank',         type: 'text' },
-    ],
-    defaults: {
-      account_name: 'AACF Foundation',
-      account_no:   '0000000000',
-      bank_name:    '[Bank Name]',
-    },
-  },
 };
 
 export const COLLECTION_KEYS = Object.keys(COLLECTIONS);

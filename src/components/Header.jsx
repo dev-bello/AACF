@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/images/logo.jpeg';
+import DonateModal from './DonateModal';
 import './Header.css';
 
 const NAV_LINKS = [
@@ -12,6 +13,19 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [donateOpen, setDonateOpen] = useState(false);
+  const onDonatePage = useLocation().pathname === '/donate';
+
+  // On the Donate page the widget is already on screen, so scroll to it
+  // instead of opening the modal. Elsewhere, open the modal.
+  function handleDonate() {
+    setOpen(false);
+    if (onDonatePage) {
+      document.querySelector('.donate-widget')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      setDonateOpen(true);
+    }
+  }
 
   return (
     <header className="aacf-header">
@@ -38,9 +52,9 @@ export default function Header() {
         </nav>
 
         <div className="aacf-header__desktop">
-          <Link to="/donate" className="aacf-header__cta">
+          <button type="button" className="aacf-header__cta" onClick={handleDonate}>
             Donate Now <span className="aacf-header__star">✻</span>
-          </Link>
+          </button>
         </div>
 
         <button
@@ -68,11 +82,17 @@ export default function Header() {
               {link.label}
             </NavLink>
           ))}
-          <Link to="/donate" className="aacf-header__mobile-cta" onClick={() => setOpen(false)}>
+          <button
+            type="button"
+            className="aacf-header__mobile-cta"
+            onClick={handleDonate}
+          >
             Donate Now
-          </Link>
+          </button>
         </div>
       )}
+
+      {donateOpen && !onDonatePage && <DonateModal onClose={() => setDonateOpen(false)} />}
     </header>
   );
 }

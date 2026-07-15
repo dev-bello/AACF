@@ -1,0 +1,66 @@
+.donate-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(12, 20, 16, 0.55);
+  backdrop-filter: blur(3px);
+  /* Scroll container. `margin: auto` on the child (not align-items: center)
+     keeps the top reachable when the modal is taller than the viewport. */
+  display: flex;
+  padding: 24px 16px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  animation: donate-modal-fade 0.15s ease;
+}
+
+@keyframes donate-modal-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.donate-modal {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  margin: auto;      /* centers when it fits, top-aligns + scrolls when it doesn't */
+  flex-shrink: 0;
+  background: var(--forest);
+  border-radius: 24px;
+  padding: 34px;
+  color: #fff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  animation: donate-modal-pop 0.18s ease;
+}
+
+@media (max-width: 520px) {
+  .donate-modal {
+    padding: 26px 20px;
+    border-radius: 20px;
+  }
+}
+
+@keyframes donate-modal-pop {
+  from { transform: translateY(12px) scale(0.98); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.donate-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  transition: background 0.15s;
+}
+
+.donate-modal__close:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
