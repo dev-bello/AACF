@@ -7,6 +7,38 @@
   font-family: system-ui, -apple-system, sans-serif;
 }
 
+/* Mobile top bar — only shown on narrow screens (see media query) */
+.admin-topbar {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  align-items: center;
+  justify-content: space-between;
+  background: #14202e;
+  color: #fff;
+  padding: 12px 16px;
+}
+.admin-topbar__brand {
+  font-weight: 700;
+  font-size: 16px;
+}
+.admin-topbar__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.admin-topbar__toggle:hover {
+  background: #1e2d3e;
+}
+
 /* Sidebar */
 .admin-sidebar {
   display: flex;
@@ -441,19 +473,68 @@
   .admin-shell {
     grid-template-columns: 1fr;
   }
-  .admin-sidebar {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+
+  /* Show the top bar; the desktop brand block inside the drawer is redundant */
+  .admin-topbar {
+    display: flex;
   }
-  .admin-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .admin-nav__group {
+  .admin-sidebar .admin-brand {
     display: none;
   }
+
+  /* Sidebar becomes a collapsible drawer under the top bar */
+  .admin-sidebar {
+    display: none;
+    padding: 8px 14px 16px;
+  }
+  .admin-sidebar--open {
+    display: flex;
+  }
+  .admin-nav {
+    overflow-y: visible;
+  }
+  .admin-nav__link {
+    padding: 11px 10px; /* larger tap targets */
+  }
+
   .admin-main {
-    padding: 20px;
+    padding: 20px 16px;
+    overflow-x: hidden;
+  }
+
+  /* Page header: stack heading and the add button */
+  .admin-page__head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* List rows: stack content above wrapped action buttons */
+  .admin-list__row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .admin-list__sub {
+    white-space: normal;
+    max-width: none;
+  }
+  .admin-list__actions {
+    flex-wrap: wrap;
+  }
+
+  /* Forms fill the width and use tighter padding */
+  .admin-form {
+    padding: 18px 16px;
+  }
+  .admin-form__actions {
+    flex-wrap: wrap;
+  }
+
+  /* Reports rows wrap so the View/Delete buttons stay reachable */
+  .admin-reports-item {
+    flex-wrap: wrap;
+  }
+  .admin-reports-name {
+    flex-basis: 100%;
   }
 }

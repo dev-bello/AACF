@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import { useAuth } from './AuthContext';
 import { COLLECTIONS, SETTINGS } from '../content/schema';
 import './admin.css';
@@ -6,6 +8,7 @@ import './admin.css';
 export default function AdminLayout() {
   const { session, signOut } = useAuth();
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   async function handleSignOut() {
     await signOut();
@@ -14,10 +17,24 @@ export default function AdminLayout() {
 
   return (
     <div className="admin-shell">
-      <aside className="admin-sidebar">
+      {/* Mobile top bar — hidden on desktop via CSS */}
+      <header className="admin-topbar">
+        <span className="admin-topbar__brand">AACF Admin</span>
+        <button
+          type="button"
+          className="admin-topbar__toggle"
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((v) => !v)}
+        >
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+      </header>
+
+      <aside className={`admin-sidebar${menuOpen ? ' admin-sidebar--open' : ''}`}>
         <div className="admin-brand">AACF Admin</div>
 
-        <nav className="admin-nav">
+        <nav className="admin-nav" onClick={() => setMenuOpen(false)}>
           <NavLink to="/admin" end className="admin-nav__link">
             Dashboard
           </NavLink>
